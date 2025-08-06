@@ -17,10 +17,15 @@ const IndustryManufacturing = React.lazy(() => import('@/pages/IndustryManufactu
 const IndustryFinancial = React.lazy(() => import('@/pages/IndustryFinancial'));
 const IndustryEducation = React.lazy(() => import('@/pages/IndustryEducation'));
 const IndustryRetail = React.lazy(() => import('@/pages/IndustryRetail'));
+const IndustryTelecom = React.lazy(() => import('@/pages/IndustryTelecom'));
+const IndustryHealthcare = React.lazy(() => import('@/pages/IndustryHealthcare'));
 const About = React.lazy(() => import('@/pages/About'));
 const News = React.lazy(() => import('@/pages/News'));
 const CaseStudies = React.lazy(() => import('@/pages/CaseStudies'));
+const Partners = React.lazy(() => import('@/pages/Partners'));
 const Careers = React.lazy(() => import('@/pages/Careers'));
+const Locations = React.lazy(() => import('@/pages/Locations'));
+const PrivacyPolicy = React.lazy(() => import('@/pages/PrivacyPolicy'));
 const Contact = React.lazy(() => import('@/pages/Contact'));
 
 const AppRouter = () => {
@@ -37,20 +42,25 @@ const AppRouter = () => {
         >
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/intelligent-transformation" element={<IntelligentTransformation />} />
+            <Route path="/intelligent" element={<IntelligentTransformation />} />
             <Route path="/services" element={<Services />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/industries" element={<Industries />} />
-            <Route path="/industries/government" element={<IndustryGovernment />} />
-            <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
-            <Route path="/industries/financial" element={<IndustryFinancial />} />
-            <Route path="/industries/education" element={<IndustryEducation />} />
-            <Route path="/industries/retail" element={<IndustryRetail />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/government" element={<IndustryGovernment />} />
+            <Route path="/manufacture" element={<IndustryManufacturing />} />
+            <Route path="/financialservices" element={<IndustryFinancial />} />
+            <Route path="/education" element={<IndustryEducation />} />
+            <Route path="/retail" element={<IndustryRetail />} />
+            <Route path="/telecom" element={<IndustryTelecom />} />
+            <Route path="/healthcare" element={<IndustryHealthcare />} />
+            <Route path="/aboutus" element={<About />} />
+            <Route path="/newslisting" element={<News />} />
+            <Route path="/case-studies-listing" element={<CaseStudies />} />
+            <Route path="/our-partners" element={<Partners />} />
+            <Route path="/career" element={<Careers />} />
+            <Route path="/findlocation" element={<Locations />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+            <Route path="/contactus" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

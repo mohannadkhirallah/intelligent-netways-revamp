@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { 
       name: 'Intelligent Transformation', 
-      href: '/intelligent-transformation'
+      href: '/intelligent'
     },
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
@@ -21,17 +21,19 @@ const Navbar = () => {
       name: 'Industries',
       href: '/industries',
       dropdown: [
-        { name: 'Government', href: '/industries/government' },
-        { name: 'Manufacturing & Resources', href: '/industries/manufacturing' },
-        { name: 'Financial Services', href: '/industries/financial' },
-        { name: 'Education', href: '/industries/education' },
-        { name: 'Retail & Consumer Goods', href: '/industries/retail' },
+        { name: 'Government', href: '/government' },
+        { name: 'Manufacturing & Resources', href: '/manufacture' },
+        { name: 'Financial Services', href: '/financialservices' },
+        { name: 'Education', href: '/education' },
+        { name: 'Retail & Consumer Goods', href: '/retail' },
+        { name: 'Telecommunications', href: '/telecom' },
+        { name: 'Healthcare', href: '/healthcare' },
       ]
     },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'About', href: '/about' },
-    { name: 'News', href: '/news' },
-    { name: 'Careers', href: '/careers' },
+    { name: 'News', href: '/newslisting' },
+    { name: 'Case Studies', href: '/case-studies-listing' },
+    { name: 'Partners', href: '/our-partners' },
+    { name: 'Careers', href: '/career' },
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -101,9 +103,11 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <Button variant="hero" size="sm" className="ml-4">
-              Contact Us
-            </Button>
+            <Link to="/contactus">
+              <Button variant="hero" size="sm" className="ml-4">
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -154,9 +158,11 @@ const Navbar = () => {
                 </div>
               ))}
               <div className="pt-4">
-                <Button variant="hero" className="w-full">
-                  Contact Us
-                </Button>
+                <Link to="/contactus">
+                  <Button variant="hero" className="w-full">
+                    Contact Us
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
